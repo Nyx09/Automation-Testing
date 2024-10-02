@@ -131,4 +131,4 @@ dist
 
 #Allure report
 ._results_/
-.allure_results/
+.allure-results/
