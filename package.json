@@ -12,5 +12,8 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^10.9.0"
   }
 }
