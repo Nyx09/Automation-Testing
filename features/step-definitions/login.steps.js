@@ -1,13 +1,17 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
-import { expect, $ } from '@wdio/globals'
+import { expect} from 'chai';
+import loginPage from '../pageobjects/login.page.js'
 
-
-When(/^I login with {string} and {string} $/, async (username, password) => {
-    await LoginPage.login(username, password);
+When(/^I login with (.*) and (.*) #login$/, async (username, password) => {
+    await loginPage.login(username, password);
 });
 
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
-    await expect(LoginPage.flashAlert).toBeExisting();
-    await expect(LoginPage.flashAlert).toHaveText(expect.stringContaining(message));
+Then(/^I should see a flash message saying (.*) #login$/, async (message) => {
+    loginPage.flashMessage(message);
 });
+
+
+
+
+
 

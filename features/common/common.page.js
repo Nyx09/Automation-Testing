@@ -2,7 +2,7 @@ class Pages {
     async page(pageName) {
         switch (pageName) {
             case 'login':
-                await browser.url('https://the-internet.herokuapp.com/login'); // Replace with your actual login URL
+                await browser.url('https://www.saucedemo.com/'); // Replace with your actual login URL
                 break;
             // Add more cases for other pages as needed
             default:
